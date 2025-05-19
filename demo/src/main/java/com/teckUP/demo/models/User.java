@@ -32,6 +32,13 @@ public class User {
     private Integer id ;
     @Column(name = "nom")
     private String nom ;
+    @Column(name = "prenom")
+    private String prenom ;
+    @Column(name = "password")
+    private  String password ;
+    @Column(name = "numtel")
+    private String numtel;
+
 
     public Integer getId() {
         return id;
@@ -51,10 +58,17 @@ public class User {
         this.prenom = prenom;
     }
 
-    @Column(name = "prenom")
-    private String prenom ;
-    @Column(name = "password")
-    private  String password ;
+
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+
 
     public String getEmail() {
         return email;
@@ -83,9 +97,7 @@ public class User {
         this.numtel = numtel;
     }
 
-    @Column(name = "numtel")
 
-    private String numtel;
 
     public Adresse getAdresse() {
         return adresse;
@@ -99,10 +111,11 @@ public class User {
     private Adresse adresse ;
 
 
-
-
+    public boolean isPresent() {
+        return false ;
 
     }
+}
 
 
 
